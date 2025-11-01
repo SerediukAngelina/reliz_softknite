@@ -8,29 +8,29 @@
     {
         "title": "Пряжа YarnArt ",
         "price": 120,
-        "image": "cottonclub.png"
+        "image": "1cottonclub.png"
+    },
+
+    {
+        "title": "Пряжа YarnArt Jeans",
+        "price": 120,
+        "image": "2jeans.png"
+    },
+
+    {
+        "title": "Пряжа YarnArt Metallic Club",
+        "price": 120,
+        "image": "3matallic.png"
     },
 
     {
         "title": "Пряжа",
         "price": 120,
-        "image": ""
+        "image": "4himalaya.png"
     },
 
     {
-        "title": "Пряжа",
-        "price": 120,
-        "image": ""
-    },
-
-    {
-        "title": "Пряжа",
-        "price": 120,
-        "image": ""
-    },
-
-    {
-        "title": "Пряжа",
+        "title": "Пряжа ",
         "price": 120,
         "image": ""
     }
