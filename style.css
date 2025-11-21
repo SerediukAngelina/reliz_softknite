@@ -7,7 +7,7 @@ nav {
 }
 
 .logo {
-  width: 140px;
+  width: 70px;
   height: auto;
   border-radius: 50%;
 }
@@ -59,6 +59,7 @@ button:hover {
   background-color: #D6A99D;
 }
 
+
 .order {
   display: none;
 }
@@ -70,10 +71,77 @@ body{
 .btn-primary{
     background-color: #D6A99D;
     border: 2px solid #D6A99D;
+    position: relative;
+    bottom: 10px;
+    width: 150px;
+    left: 40%;
 
+}
+.btn-primary:active:focus {
+  background-color: #b38c82;
+  border: none;
 }
 
 .btn-primary:hover{
     background-color: #b6725e;
     border: 2px solid #b6725e;
+}
+
+.card:hover{
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+footer {
+  background-color: #e5b4ab; /* пастельно-рожевий як у шапці */
+  padding: 40px 0 10px;
+  color: #4a2f2b;
+  margin-top: 40px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-logo img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.footer-logo h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.footer-links h4,
+.footer-contacts h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-links a {
+  display: block;
+  color: #4a2f2b;
+  text-decoration: none;
+  margin: 5px 0;
+  transition: 0.2s;
+}
+
+.footer-links a:hover {
+  color: white;
+  padding-left: 5px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 14px;
+  opacity: 0.8;
 }

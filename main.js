@@ -32,11 +32,11 @@ function getCardHTML(product) {
   <img src="img/${product.image}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">${product.title}</h5>
-    <p class="card-text">${product.price}</p>
-    <a href="#" class="btn btn-primary" data-product='${JSON.stringify(
+    <p class="card-text">${product.price} грн</p>
+    
+  </div><a href="#" class="btn btn-primary" data-product='${JSON.stringify(
       product
     )}'>Додати в кошик</a>
-  </div>
 </div>`;
 }
 
@@ -119,60 +119,3 @@ function addToCart(event) {
   cart.addItem(product);
   console.log(cart);
 }
-
-//Корзина
-let cart_list = document.querySelector(".cart-items-list");
-let cart_total = document.querySelector(".cart-total");
-let orderBtn = document.querySelector("#orderBtn");
-let deleteBtn = document.querySelector("#deleteBtn");
-let orderSection = document.querySelector(".order");
-let orderForm = document.querySelector(".order-form");
-let confirmBtn = document.querySelector(".confirm-order-btn");
-function get_item(item) {
-  return `<div  class="card mb-3" style="max-width: 540px;">
-  <div class="row g-0">
-    <div class="col-md-4">
-      <img src="img/${item.image}" class="img-fluid rounded-start" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">${item.title}</h5>
-          <div class="cart-item-quantity">Кількість: ${item.quantity}</div>
-                <div class="cart-item-price" data-price="${item.price}">${
-    item.price * item.quantity
-  } грн</div>
-      </div>
-    </div>
-  </div>
-</div>`;
-}
-
-function showCartList() {
-  cart_list.innerHTML = "";
-  for (let key in cart.items) {
-    // проходимося по всіх ключах об'єкта cart.items
-    cart_list.innerHTML += get_item(cart.items[key]);
-  }
-  cart_total.innerHTML = cart.calculateTotal();
-}
-
-showCartList();
-
-orderBtn.addEventListener("click", function (event) {
-  orderBtn.style.display = "none";
-  orderSection.style.display = "block";
-});
-
-confirmBtn.addEventListener("click", function () {
-  if (orderForm.checkValidity()) {
-    alert("Ваше замовлення успішно оформлено!");
-    orderForm.reset();
-  } else {
-    orderForm.reportValidity();
-  }
-});
-
-deleteBtn.addEventListener("click", function () {
-  document.cookie = "cart=; max-age=0; path=/";
-  location.reload();
-});
